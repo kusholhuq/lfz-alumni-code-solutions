@@ -1,0 +1,52 @@
+.box{
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  margin: 1rem auto;
+}
+.input{
+  border-radius: 5px;
+  border:1px solid rgb(210, 212, 212);
+  padding: .3rem;
+}
+.input:focus{
+  background-color:rgb(243, 243, 243);
+  border-color:rgb(210, 212, 212);
+}
+.submit{
+  background-color: rgb(236, 93, 87);
+  color: white;
+  border-radius: 20px;
+  padding: .5rem 1.25rem;
+  border:none;
+  font-size:.75rem;
+}
+.container{
+  width: 50%;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+}
+body{
+  font-family: 'Brandon Grotesque';
+  /* font-family: 'AtlasGrotesk'; */
+  display: flex;
+  justify-content: center
+}
+h1{
+  color:  rgb(236, 93, 87);
+  text-align: center;
+}
+label{
+  font-size:.75rem;
+  margin-left:.5rem;
+}
+.button-holder{
+  width: 25rem;
+  display: flex;
+  justify-content: flex-end;
+  margin: auto;
+}
+.input::placeholder{
+  color:rgb(178, 178, 178);
+}
