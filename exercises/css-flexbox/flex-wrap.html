@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,71 +10,84 @@
   <link rel="stylesheet" href="pokemon.css">
   <style>
     /* your styles here 👇 */
+    .flex {
+      display: flex;
+    }
 
+    .flex-wrap {
+      flex-wrap: wrap;
+    }
+
+    .flex-basis-sixth {
+      flex-basis: calc(100%/6.5);
+      margin: .4rem;
+    }
   </style>
 </head>
+
 <body>
-  <div id="card-deck">
-    <div class="card-container">
+  <div id="card-deck" class="flex-wrap flex">
+    <div class="card-container flex-basis-sixth">
       <div class="pokemon-card">
         <img src="images/001.png" alt="Bulbasaur">
       </div>
     </div>
-    <div class="card-container">
+    <div class="card-container flex-basis-sixth">
       <div class="pokemon-card">
         <img src="images/004.png" alt="Charmander">
       </div>
     </div>
-    <div class="card-container">
+    <div class="card-container flex-basis-sixth">
       <div class="pokemon-card">
         <img src="images/007.png" alt="Squirtle">
       </div>
     </div>
-    <div class="card-container">
+    <div class="card-container flex-basis-sixth">
       <div class="pokemon-card">
         <img src="images/025.png" alt="Pikachu">
       </div>
     </div>
-    <div class="card-container">
+    <div class="card-container flex-basis-sixth">
       <div class="pokemon-card">
         <img src="images/001.png" alt="Bulbasaur">
       </div>
     </div>
-    <div class="card-container">
+    <div class="card-container flex-basis-sixth">
       <div class="pokemon-card">
         <img src="images/104.png" alt="Cubone">
       </div>
     </div>
-    <div class="card-container">
+    <div class="card-container flex-basis-sixth">
       <div class="pokemon-card">
         <img src="images/039.png" alt="Jigglypuff">
       </div>
     </div>
-    <div class="card-container">
+    <div class="card-container flex-basis-sixth">
       <div class="pokemon-card">
         <img src="images/004.png" alt="Charmander">
       </div>
     </div>
-    <div class="card-container">
+    <div class="card-container flex-basis-sixth">
       <div class="pokemon-card">
         <img src="images/025.png" alt="Pikachu">
       </div>
     </div>
-    <div class="card-container">
+    <div class="card-container flex-basis-sixth">
       <div class="pokemon-card">
         <img src="images/007.png" alt="Squirtle">
       </div>
     </div>
-    <div class="card-container">
+    <div class="card-container flex-basis-sixth">
       <div class="pokemon-card">
         <img src="images/104.png" alt="Cubone">
       </div>
     </div>
-    <div class="card-container">
+    <div class="card-container flex-basis-sixth">
       <div class="pokemon-card">
         <img src="images/039.png" alt="Jigglypuff">
       </div>
     </div>
   </div>
 </body>
+
 </html>

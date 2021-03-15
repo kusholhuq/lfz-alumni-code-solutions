@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,26 +10,39 @@
   <link rel="stylesheet" href="pokemon.css">
   <style>
     /* your styles here 👇 */
+    .flex {
+      display: flex;
+    }
 
+    .justify-content {
+      justify-content: center;
+      padding: .5rem;
+    }
+
+    .flex-basis-quarter {
+      flex-basis: 25%;
+    }
   </style>
 </head>
+
 <body>
-  <div id="card-deck">
-    <div class="card-container">
+  <div id="card-deck" class="justify-content flex">
+    <div class="card-container flex-basis-quarter">
       <div class="pokemon-card">
         <img src="images/001.png" alt="Bulbasaur">
       </div>
     </div>
-    <div class="card-container">
+    <div class="card-container flex-basis-quarter">
       <div class="pokemon-card">
         <img src="images/004.png" alt="Charmander">
       </div>
     </div>
-    <div class="card-container">
+    <div class="card-container flex-basis-quarter">
       <div class="pokemon-card">
         <img src="images/007.png" alt="Squirtle">
       </div>
     </div>
   </div>
 </body>
+
 </html>
