@@ -26,22 +26,22 @@
 }
 
 .image{
-background-size: cover;
-background-repeat: no-repeat;
-height: 3rem;
-width: 3rem;
-position: relative;
-top: 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 3rem;
+  width: 3rem;
+  position: relative;
+  top: 25%;
 }
 .image1{
-background-image: url(./images/merge.png)
+  background-image: url(./images/merge.png)
 }
 .image2{
-background-image: url(./images/cloud-computing.png)
+  background-image: url(./images/cloud-computing.png)
 
 }
 .image3{
-background-image: url(./images/discussion.png)
+  background-image: url(./images/discussion.png)
 
 }
 
