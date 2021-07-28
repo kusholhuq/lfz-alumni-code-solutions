@@ -1,0 +1,71 @@
+.container{
+  max-width: 850px;
+  margin: auto;
+  background-color: rgb(25, 150, 218);
+  color: white;
+  padding: 4rem;
+  font: 'Lato';
+}
+
+.row{
+  display: flex;
+}
+
+.section-heading{
+  text-align: center;
+}
+
+.col-full{
+  width: 100%;
+}
+
+.col-third{
+  width: 33%;
+  padding: 10px;
+  text-align: center;
+  align-items:center;
+  /* align-content: center; */
+  display: flex;
+  flex-direction: column;
+}
+
+.image{
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 3rem;
+  width: 3rem;
+  position: relative;
+  top: 25%;
+}
+.image1{
+  background-image: url(./images/merge.png)
+}
+.image2{
+  background-image: url(./images/cloud-computing.png)
+
+}
+.image3{
+  background-image: url(./images/discussion.png)
+
+}
+
+.white-circle{
+  height: 6rem;
+  width: 6rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+p{
+  margin-top: 0;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+h4 {
+  font-weight: 500;
+}
