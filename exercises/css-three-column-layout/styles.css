@@ -9,6 +9,9 @@
 
 .row{
   display: flex;
+}
+
+.section-heading{
   text-align: center;
 }
 
