@@ -1,0 +1,22 @@
+.container{
+  max-width: 800px;
+  margin: auto;
+  background-color: rgb(25, 150, 218);
+  color: white;
+  padding: 4rem;
+  font: 'Lato';
+}
+
+.row{
+  display: flex;
+}
+
+.col-full{
+  width: 100%;
+}
+
+.col-third{
+  width: 33%;
+  padding: 10px;
+  text-align: center;
+}
