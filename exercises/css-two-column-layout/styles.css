@@ -17,11 +17,6 @@
   display: flex;
 }
 
-.col-quarter{
-  width:25%;
-
-}
-
 .col-three-quarters{
   width:75%;
   padding: 3px;
@@ -39,23 +34,4 @@ button{
   color: red;
   border: red solid 2px;
   padding: 6px 30px;
-}
-
-.image {
-  height: 50%;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.image1 {
-  background-image: url(./images/software.svg);
-}
-.image2 {
-  background-image: url(./images/practice.svg);
-}
-.image3 {
-  background-image: url(./images/circumstance.svg);
-}
-.image4 {
-  background-image: url(./images/data.svg);
 }
