@@ -11,3 +11,22 @@
 .col-half {
   width: 50%;
 }
+
+.navbar{
+  margin-top: 1rem;
+}
+
+.blue-logo{
+  width: 25%;
+}
+button{
+  text-decoration: none;
+  border: none;
+}
+.white-button{
+  background-color: white;
+}
+.blue-button{
+  background-color: rgb(41, 68, 100);
+  color: white;
+}
