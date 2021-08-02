@@ -4,8 +4,8 @@
 }
 
 .row{
- display: flex;
- width: 100%;
+  display: flex;
+  width: 100%;
 }
 
 .col-half {
@@ -30,4 +30,29 @@ button{
 .blue-button{
   background-color: rgb(41, 68, 100);
   color: white;
+}
+
+.hero{
+  background-image: url("./images/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.overlay{
+  background-color: rgba(0,0,0,.2);
+}
+
+.p-1{
+  padding: 1rem;
+}
+.p-2{
+  padding: 2rem;
+}
+
+.mt-1{
+  margin-top:1rem;
+}
+
+.mt-2{
+  margin-top:2rem;
 }
