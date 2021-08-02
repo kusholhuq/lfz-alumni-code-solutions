@@ -14,7 +14,11 @@
 
 .navbar{
   margin-top: 1rem;
-  border-bottom: solid 1px lightgray;
+  border-bottom: solid 1px rgb(217, 217, 217);
+}
+
+.grey{
+  color: rgb(217, 217, 217);
 }
 
 .blue-logo{
@@ -29,7 +33,13 @@ button{
 }
 .blue-button{
   background-color: rgb(41, 68, 100);
-  color: white;
+  color: rgb(217, 217, 217);
+  border-radius: 3px;
+}
+
+.nav-buttons{
+  display: flex;
+  justify-content: space-between;
 }
 
 .hero{
@@ -41,6 +51,32 @@ button{
 .overlay{
   background-color: rgba(0,0,0,.2);
 }
+
+.p-half{
+  padding: .5rem;
+}
+
+.pt-half{
+  padding-top: .5rem;
+}
+.pb-half{
+  padding-bottom: .5rem;
+}
+.pt-1{
+  padding-top: 1rem;
+}
+.pb-1{
+  padding-bottom: 1rem;
+}
+.pl-2{
+  padding-left: 2rem;
+}
+.pr-2{
+  padding-right: 2rem;
+}
+
+
+
 
 .p-1{
   padding: 1rem;
@@ -55,4 +91,8 @@ button{
 
 .mt-2{
   margin-top:2rem;
+}
+
+.mb-1{
+  margin-bottom:1rem;
 }
