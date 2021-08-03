@@ -12,6 +12,14 @@
   width: 50%;
 }
 
+.col-quarter {
+  width: 25%;
+}
+
+.col-third {
+  width: 33%;
+}
+
 .navbar{
   margin-top: 1rem;
   border-bottom: solid 1px rgb(217, 217, 217);
@@ -74,10 +82,6 @@ button{
 .pr-2{
   padding-right: 2rem;
 }
-
-
-
-
 .p-1{
   padding: 1rem;
 }
@@ -92,7 +96,12 @@ button{
 .mt-2{
   margin-top:2rem;
 }
-
 .mb-1{
   margin-bottom:1rem;
+}
+.jc-a {
+  justify-content: space-around;
+}
+.txt-c{
+  text-align: center;
 }
