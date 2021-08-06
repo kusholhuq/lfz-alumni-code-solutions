@@ -37,7 +37,9 @@
 .grey-b{
   background-color: rgb(250, 250, 250);
 }
-
+.grey-b2{
+  background-color: rgb(82, 83, 81);
+}
 .blue-logo{
   width: 25%;
 }
@@ -116,6 +118,15 @@ button{
 }
 .mb-2{
   margin-bottom:2rem;
+}
+.ml-2{
+  margin-left:2rem;
+}
+.ml-3{
+  margin-left:3rem;
+}
+.ml-4{
+  margin-left:4rem;
 }
 .jc-a {
   justify-content: space-around;
