@@ -2,29 +2,23 @@
   max-width: 800px;
   margin: auto;
 }
-
 .row{
   display: flex;
   width: 100%;
 }
-
 .col-half {
   width: 50%;
 }
-
 .col-quarter {
   width: 25%;
 }
-
 .col-third {
   width: 33%;
 }
-
 .navbar{
   margin-top: 1rem;
   border-bottom: solid 1px rgb(217, 217, 217);
 }
-
 .grey{
   color: rgb(217, 217, 217);
 }
@@ -55,12 +49,10 @@ button{
   color: rgb(217, 217, 217);
   border-radius: 3px;
 }
-
 .nav-buttons{
   display: flex;
   justify-content: space-between;
 }
-
 .hero{
   background-image: url("./images/hero.jpg");
   background-repeat: no-repeat;
@@ -70,11 +62,9 @@ button{
 .overlay{
   background-color: rgba(0,0,0,.2);
 }
-
 .p-half{
   padding: .5rem;
 }
-
 .pt-half{
   padding-top: .5rem;
 }
@@ -120,11 +110,9 @@ button{
 .p-4{
   padding: 4rem;
 }
-
 .mt-1{
   margin-top:1rem;
 }
-
 .mt-2{
   margin-top:2rem;
 }
@@ -163,6 +151,9 @@ button{
 }
 .line-h{
   line-height: .5rem;
+}
+.font-wn{
+  font-weight: normal;
 }
 .white-logo{
   width: 30%;
