@@ -152,6 +152,9 @@ button{
 .line-h{
   line-height: .5rem;
 }
+.line-h1{
+  line-height: 1.25rem;
+}
 .font-wn{
   font-weight: normal;
 }
