@@ -68,8 +68,14 @@ button{
 .pt-half{
   padding-top: .5rem;
 }
+.pt-75{
+  padding-top: .75rem;
+}
 .pb-half{
   padding-bottom: .5rem;
+}
+.pb-75{
+  padding-bottom: .75rem;
 }
 .pb-3{
   padding-bottom: 3rem;
@@ -92,11 +98,17 @@ button{
 .pl-2{
   padding-left: 2rem;
 }
+.pl-3{
+  padding-left: 3rem;
+}
 .pl-4{
   padding-left: 4rem;
 }
 .pr-2{
   padding-right: 2rem;
+}
+.pr-3{
+  padding-right: 3rem;
 }
 .p-1{
   padding: 1rem;
