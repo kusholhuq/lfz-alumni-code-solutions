@@ -4,18 +4,41 @@
     <title>
       CSS Four Column Layout
     </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="container">
+    <div class="container grey-b">
       <div class="row jc-c">
         <h2>How It Works</h2>
       </div>
       <div class="row jc-a">
-        <div class="col-quarter"></div>
-        <div class="col-quarter"></div>
-        <div class="col-quarter"></div>
-        <div class="col-quarter"></div>
+        <div class="col-quarter align">
+          <img src="./images/screen-1.png" alt="">
+          <img class="icon" src="./images/switch-icon.png" alt="">
+          <h4>App Switching</h4>
+          <p>Toggles all your apps on and off.</p>
+        </div>
+        <div class="col-quarter align">
+          <img src="./images/screen-2.png" alt="">
+          <img class="icon" src="./images/filter-icon.png" alt="">
+          <h4>Trip Filtering</h4>
+          <p>Evaluates your trip requests.</p>
+        </div>
+        <div class="col-quarter align">
+          <img src="./images/screen-3.png" alt="">
+          <img class="icon" src="./images/slider-icon.png" alt="">
+          <h4>Service Filters</h4>
+          <p>Accepts only your ideal trips.</p>
+        </div>
+        <div class="col-quarter align">
+          <img src="./images/screen-4.png" alt="">
+          <img class="icon" src="./images/bars-icon.png" alt="">
+          <h4>Stats + Mileage</h4>
+          <p>Tracks your trips across all apps.</p>
+        </div>
       </div>
     </div>
   </body>
