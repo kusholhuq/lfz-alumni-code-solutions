@@ -1,0 +1,23 @@
+.container {
+  max-width: 800px;
+  margin:auto;
+}
+.row{
+  width: 100%;
+  display: flex;
+}
+.col-full{
+  width:100%;
+}
+.col-quarter{
+  width:25%;
+}
+.grey-b {
+  background-color:rgb(247, 248, 250);
+}
+.jc-c{
+  justify-content: center;
+}
+.jc-a{
+  justify-content: space-around;
+}
