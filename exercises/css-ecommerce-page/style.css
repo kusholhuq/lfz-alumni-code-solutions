@@ -1,6 +1,7 @@
 .container{
   max-width: 800px;
   margin: auto;
+  font-family: 'DM Sans';
 }
 .row{
   width:100%;
