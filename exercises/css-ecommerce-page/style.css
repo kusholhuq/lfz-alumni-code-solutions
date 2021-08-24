@@ -21,3 +21,9 @@
 img{
   width:50%;
 }
+.jc-c{
+  justify-content: center;
+}
+.txt-c{
+  text-align: center;
+}
