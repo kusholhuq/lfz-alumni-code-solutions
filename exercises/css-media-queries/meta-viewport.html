@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- your code here 👇 -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CSS Media Queries - Meta Viewport</title>
   <link rel="stylesheet" href="reset.css">
   <style>
@@ -22,22 +22,8 @@
       background-color: blue;
     }
 
-    @media only screen
-    and (min-device-width: 320px)
-    and (max-device-width: 480px)
-    and (-webkit-min-device-pixel-ratio: 2)
-    and (orientation: landscape) {
-      .box {
-        background-color: red;
-      }
-    }
 
-    /* @media screen and (min-width: 568px) {
-      .box{
-        background-color: green;
-      }
-    } */
-    @media screen and (max-width: 567px) {
+    @media screen and (min-width: 568px) {
       .box{
         background-color: red;
       }
