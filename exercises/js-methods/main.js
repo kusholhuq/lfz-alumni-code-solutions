@@ -17,15 +17,15 @@ console.log("randomHero: ", randomHero);
 
 var library = [
   {
-    title: 'JavaScript for Impatient Programmers',
-    author: 'Dr. Axel Rauschmayer'
+    title: 'Naruto',
+    author: 'Masashi Kishimoto'
   },
   {
-    title: 'JavaScript for Impatient Programmers',
-    author: 'Dr. Axel Rauschmayer'
+    title: 'Bleach',
+    author: 'Tite Kubo'
   },
   {
-    title: 'JavaScript for Impatient Programmers',
-    author: 'Dr. Axel Rauschmayer'
+    title: 'My Hero Academia',
+    author: 'Kohei Horikoshi'
   }
 ]
