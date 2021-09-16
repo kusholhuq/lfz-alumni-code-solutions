@@ -29,3 +29,18 @@ var library = [
     author: 'Kohei Horikoshi'
   }
 ]
+
+var lastBook = library.pop();
+console.log("lastBook: ", lastbook);
+
+var firstBook = library.shift();
+console.log("firstBook: ", firstBook);
+
+var js = {
+  title: 'JavaScript for Impatient Programmers',
+  author: 'Dr. Axel Rauschmayer'
+};
+var css = {
+  title: 'CSS Secrets',
+  author: 'Lea Verou'
+}
