@@ -67,3 +67,24 @@ function doubleAll(numbers){
 
 console.log("doubleAll([0,1,2,3,4,5,6]): ", doubleAll([0,1,2,3,4,5,6]));
 console.log("doubleAll([3,6,9,12,15,18]): ", doubleAll([3,6,9,12,15,18]));
+
+function getKeys(object){
+  const keys = [];
+  for (key in object){
+    keys.push(key);
+  }
+  return keys;
+}
+console.log("getKeys({key1:1, key2:2, key3:3}): ", getKeys({key1:1, key2:2, key3:3}));
+console.log("getKeys({name:'Jim', age:25, job: 'Developer'}): ", getKeys({name:'Jim', age:25, job: 'Developer'}));
+
+function getValues(object){
+  const values = [];
+  for (key in object){
+    values.push(object[key]);
+  }
+  return values;
+}
+
+console.log("getValues({key1:1, key2:2, key3:3}): ", getValues({ key1: 1, key2: 2, key3: 3 }));
+console.log("getValues({name:'Jim', age:25, job: 'Developer'}): ", getValues({ name: 'Jim', age: 25, job: 'Developer' }));
