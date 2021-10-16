@@ -10,6 +10,5 @@ function zip(first, second){
   for(let i=0; i<array.length; i++){
     result.push([first[i],second[i]]);
   }
-  console.log(result)
   return result;
 }
