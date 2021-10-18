@@ -235,3 +235,24 @@ const deck = [
 ]
 
 //shuffle
+//to shuffle the deck
+//you need to select a random card from the deck
+//remove it from the deck
+//and place it in a new pile
+//optional: set deck equal to the new pile
+const newPile = [];
+function shuffle(){
+  //create a random number from 0 to deck length - 1
+  while(deck.length){
+    let number = Math.floor(Math.random()*(deck.length-1));
+    let card = deck.splice(number,1);
+    newPile.push(card[0]);
+  }
+}
+shuffle();
+console.log("newPile: ", newPile);
+
+//deal two cards to each player
+//draw from the top of the new pile
+//(loop through the player array giving each 1 card)
+//repeat the loop
