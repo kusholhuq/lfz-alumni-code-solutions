@@ -19,7 +19,7 @@ const players = [
     name: "Jessie",
     hand: []
   }
-]
+];
 
 //deck
 
@@ -232,25 +232,37 @@ const deck = [
     rank: 'King',
     suit: 'diamonds'
   }
-]
+];
 
-//shuffle
-//to shuffle the deck
-//you need to select a random card from the deck
-//remove it from the deck
-//and place it in a new pile
-//optional: set deck equal to the new pile
+
 const newPile = [];
+
 function shuffle(){
-  //create a random number from 0 to deck length - 1
-  while(deck.length){
-    let number = Math.floor(Math.random()*(deck.length-1));
-    let card = deck.splice(number,1);
+  const workingDeck = [...deck]
+  while(workingDeck.length){
+    let number = Math.floor(Math.random()*(workingDeck.length-1));
+    let card = workingDeck.splice(number,1);
     newPile.push(card[0]);
   }
 }
+
 shuffle();
 console.log("newPile: ", newPile);
+
+
+function deal(){
+  const workingPile = [...newPile]
+  for(let b=0; b<players.length; b++){
+    let card = workingPile.splice(0,1)
+    players[b].hand.push(card[0]);
+  }
+  for (let c = 0; c < players.length; c++) {
+    let card = workingPile.splice(0, 1)
+    players[c].hand.push(card[0]);
+  }
+}
+deal();
+console.log("players:" ,players)
 
 //deal two cards to each player
 //draw from the top of the new pile
