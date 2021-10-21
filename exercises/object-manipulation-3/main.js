@@ -262,9 +262,49 @@ function deal(){
   }
 }
 deal();
-console.log("players:" ,players)
+console.log("players:" ,players);
 
-//deal two cards to each player
-//draw from the top of the new pile
-//(loop through the player array giving each 1 card)
-//repeat the loop
+const valueKey = {
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+  6: 6,
+  7: 7,
+  8: 8,
+  9: 9,
+  10: 10,
+  Jack: 10,
+  Queen: 10,
+  King: 5,
+  Ace: 11
+}
+
+function findWinner(){
+//loop through players hands
+//sum their hand
+//if its max set their name to max name
+//if its not max go next
+//return max name at the end
+let maxPoints = 0;
+let maxName = '';
+let maxIndex = 0;
+  for(let i=0; i<players.length; i++){
+    let card1 = players[i].hand[0];
+    let card2 = players[i].hand[1];
+    let playerPoints = valueKey[card1] + valueKey[card2];
+    if(playerPoints > maxPoints){
+      maxPoints = playerPoints;
+      maxName = players[i].name;
+      maxIndex = i;
+    }
+  }
+  console.log(`${maxName} is the winner!`);
+
+  //lets check for any ties
+  //loop through again
+  //see if any players before the index reach the same max point value
+  //if so mark down the names of ppl who matched
+  //then rerun the whole game with those players
+
+}
