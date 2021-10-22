@@ -1,7 +1,5 @@
 console.log('Lodash is loaded:', typeof _ !== 'undefined');
 
-//players
-
 const players = [
   {
     name: "Cloud",
@@ -20,9 +18,6 @@ const players = [
     hand: []
   }
 ];
-
-//deck
-
 const deck = [
   {
     rank: 'Ace',
@@ -234,36 +229,6 @@ const deck = [
   }
 ];
 
-
-const newPile = [];
-
-function shuffle(){
-  const workingDeck = [...deck]
-  while(workingDeck.length){
-    let number = Math.floor(Math.random()*(workingDeck.length-1));
-    let card = workingDeck.splice(number,1);
-    newPile.push(card[0]);
-  }
-}
-
-shuffle();
-console.log("newPile: ", newPile);
-
-
-function deal(){
-  const workingPile = [...newPile]
-  for(let b=0; b<players.length; b++){
-    let card = workingPile.splice(0,1)
-    players[b].hand.push(card[0]);
-  }
-  for (let c = 0; c < players.length; c++) {
-    let card = workingPile.splice(0, 1)
-    players[c].hand.push(card[0]);
-  }
-}
-deal();
-console.log("players:" ,players);
-
 const valueKey = {
   2: 2,
   3: 3,
@@ -280,18 +245,40 @@ const valueKey = {
   Ace: 11
 }
 
-function findWinner(){
-//loop through players hands
-//sum their hand
-//if its max set their name to max name
-//if its not max go next
-//return max name at the end
-let maxPoints = 0;
-let maxName = '';
-let maxIndex = 0;
+const newPile = [];
+
+function shuffle(){
+  const shuffledDeck =[];
+  const workingDeck = [...deck]
+  while(workingDeck.length){
+    let number = Math.floor(Math.random()*(workingDeck.length-1));
+    let card = workingDeck.splice(number,1);
+    // newPile.push(card[0]);
+    shuffledDeck.push(card[0]);
+  }
+
+  return shuffledDeck;
+}
+
+function deal(deck, players, cardsPerHand){
+  const workingPile = deck;
+
+  for(let i=0; i<cardsPerHand; i++){
+    for (let b = 0; b < players.length; b++) {
+      let card = workingPile.splice(0, 1)
+      players[b].hand.push(card[0]);
+    }
+  }
+  console.log("Players: ", players);
+}
+
+function findWinner(players){
+  let maxPoints = 0;
+  let maxName = '';
+  let maxIndex = 0;
   for(let i=0; i<players.length; i++){
-    let card1 = players[i].hand[0];
-    let card2 = players[i].hand[1];
+    let card1 = players[i].hand[0].rank;
+    let card2 = players[i].hand[1].rank;
     let playerPoints = valueKey[card1] + valueKey[card2];
     if(playerPoints > maxPoints){
       maxPoints = playerPoints;
@@ -299,12 +286,44 @@ let maxIndex = 0;
       maxIndex = i;
     }
   }
-  console.log(`${maxName} is the winner!`);
 
-  //lets check for any ties
-  //loop through again
-  //see if any players before the index reach the same max point value
-  //if so mark down the names of ppl who matched
-  //then rerun the whole game with those players
+  const winnersArray =[];
+  for(let k=0; k<players.length; k++){
+    let card1 = players[k].hand[0].rank;
+    let card2 = players[k].hand[1].rank;
+    let playerPoints = valueKey[card1] + valueKey[card2];
+    if(playerPoints === maxPoints){
+      winnersArray.push({
+        name: players[k].name,
+        hand: []
+      })
+    }
+  }
 
+  if(winnersArray.length>1){
+    let winnersString = "";
+    for(let i=0; i< winnersArray.length; i++){
+      if(i===winnersArray.length-1){
+        winnersString = winnersString + " and " + winnersArray[i].name;
+        continue;
+      }
+      winnersString = winnersString+ " " + winnersArray[i].name +",";
+    }
+    console.log("It's a tie! Time for a tie breaker between:" +winnersString);
+    runGame(winnersArray, 2);
+  }
+  if(winnersArray.length === 1){
+    console.log(`${winnersArray[0].name} is the winner`)
+  }
+  return winnersArray;
 }
+
+function runGame(playerArray, cardsPerHand){
+
+  const workingDeck = shuffle();
+  deal(workingDeck, playerArray, cardsPerHand);
+  const winners = findWinner(playerArray)
+  return winners;
+}
+
+runGame(players, 2);
