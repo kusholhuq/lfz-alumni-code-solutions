@@ -6,7 +6,6 @@ const inner = document.querySelector("#inner");
 const smallest = document.querySelector("#smallest");
 
 function lightSwitch() {
-console.log("function call");
   light = !light;
   if (light === false) {
     lightbulb.className = "circle dark-bulb";
@@ -19,8 +18,6 @@ console.log("function call");
     background.className = "container light-bg";
     inner.className = "inner light-inner";
     smallest.className = "smallest light-smallest"
-
-
   }
 }
 
