@@ -5,10 +5,10 @@ let currentLetterIndex = 0;
 
 function keyDownHandler(event){
 
-  const currentLetter = spanArray[currentLetterIndex].innerHTML;
+  const currentLetter = spanArray[currentLetterIndex].textContent;
   console.log(event);
   console.log(event.key);
-  if(event.key === currentLetter){
+  if (event.key === currentLetter || (event.code === 'Space' && spanArray[currentLetterIndex].innerHTML ==="&nbsp;")){
     spanArray[currentLetterIndex].classList.remove("underline");
     spanArray[currentLetterIndex].classList.remove("red");
     spanArray[currentLetterIndex].classList.add("green");
