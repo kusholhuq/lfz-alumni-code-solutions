@@ -1,0 +1,26 @@
+span {
+  display: inline-block;
+  font-size: 5rem;
+  font-family: monospace;
+  word-spacing: 60px;
+}
+
+.widen-space {
+  width: 50px;
+}
+
+.container {
+  margin: auto;
+  width: 99vw;
+  text-align: center;
+  position: relative;
+  top: 40vh;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
