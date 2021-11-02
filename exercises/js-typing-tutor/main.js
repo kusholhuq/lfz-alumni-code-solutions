@@ -10,11 +10,10 @@ let currentLetterIndex = 0;
 let mistakeCounter = 0;
 
 function endGame() {
-  let accuracyScore = Math.floor((mistakeCounter / spanArray.length) * 100);
+  let accuracyScore = 100 - Math.floor((mistakeCounter / spanArray.length) * 100);
   accuracy.textContent = accuracyScore;
   modal.classList.remove("hidden");
   document.removeEventListener('keydown', keyDownHandler);
-  console.log("endgame called");
 }
 
 function playAgain() {
@@ -29,7 +28,6 @@ function playAgain() {
 }
 
 function keyDownHandler(event){
-  console.log("still handling keydowns")
   if(event.repeat){
     return;
   }
