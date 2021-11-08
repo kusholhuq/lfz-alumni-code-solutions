@@ -56,3 +56,8 @@ var pokedex = [
     imageUrl: 'images/blastoise.png'
   }
 ];
+
+
+function renderPokemon (pokemon) {
+
+}
