@@ -60,4 +60,42 @@ var pokedex = [
 
 function renderPokemon (pokemon) {
 
+  let pokemonObject;
+  for(let i=0; i<pokedex.length; i++){
+    if(pokedex[i].name === pokemon){
+      pokemonObject = pokedex[i];
+      break;
+    }
+  }
+
+  console.log(pokemonObject)
+
+  var outerDiv = document.createElement('div');
+  outerDiv.setAttribute('class', 'column-third');
+
+  var pokemonCard = document.createElement('div');
+  pokemonCard.setAttribute('class', 'pokemon-card');
+
+  var image = document.createElement('img');
+  image.setAttribute('src', pokemonObject.imageUrl);
+
+  var cardText = document.createElement('div');
+  cardText.setAttribute('class', 'pokemon-card-text');
+
+  var h2 = document.createElement('h2');
+
+
+  var h3 = document.createElement('h3');
+
+
+
+  outerDiv.appendChild(pokemonCard);
+  pokemonCard.appendChild(image);
+
+
+
+
+  return outerDiv;
 }
+
+console.log(renderPokemon('Blastoise'));
