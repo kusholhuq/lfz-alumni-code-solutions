@@ -83,14 +83,22 @@ function renderPokemon (pokemon) {
   cardText.setAttribute('class', 'pokemon-card-text');
 
   var h2 = document.createElement('h2');
-
+  h2.textContent = pokemonObject.name;
 
   var h3 = document.createElement('h3');
+  var h3Text = "#" + pokemonObject.number;
+  h3.textContent  = h3Text;
 
+  var p = document.createElement('p');
+  p.textContent = pokemonObject.description;
 
+  cardText.appendChild(h2)
+  cardText.appendChild(h3)
+  cardText.appendChild(p)
 
   outerDiv.appendChild(pokemonCard);
   pokemonCard.appendChild(image);
+  pokemonCard.appendChild(cardText);
 
 
 
