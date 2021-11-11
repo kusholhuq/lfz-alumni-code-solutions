@@ -68,7 +68,6 @@ function renderPokemon (pokemon) {
     }
   }
 
-  console.log(pokemonObject)
 
   var outerDiv = document.createElement('div');
   outerDiv.setAttribute('class', 'column-third');
@@ -106,4 +105,11 @@ function renderPokemon (pokemon) {
   return outerDiv;
 }
 
-console.log(renderPokemon('Blastoise'));
+
+
+var row = document.querySelector(".row");
+
+for(let i=0; i<pokedex.length; i++){
+  let pokemon = renderPokemon(pokedex[i].name);
+  row.appendChild(pokemon);
+}
