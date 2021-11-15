@@ -11,5 +11,15 @@ tabContainer.addEventListener('click', function(event){
         tabList[i].classList.remove('active')
       }
     }
+
+    var dataView = event.target.getAttribute("data-view")
+
+    for(let b = 0; b < viewList.length; b++){
+      if(dataView === viewList[b].getAttribute("data-view")){
+        viewList[b].classList.remove("hidden");
+      } else {
+        viewList[b].classList.add("hidden");
+      }
+    }
   }
 })
