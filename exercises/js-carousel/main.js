@@ -1,33 +1,41 @@
-//solution
-//brainstorm
-//an array containing the image source
-//every three seconds it goes to the next index
-//the dots reflect the array.length
-
 const imageArray = ["001.png", "004.png", "007.png", "025.png", "039.png"];
-
-const imageHolder = document.querySelector("#picture");
-
-const image = document.createElement("img");
-image.setAttribute("src","./images/"+imageArray[0]);
-imageHolder.appendChild(image);
-
+const image = document.querySelector("#target");
+const left = document.querySelector("#left");
+const right = document.querySelector("#right");
 let switched = false;
-let counter = 1
+let counter = 0
 
 function autoSwitch () {
   if(switched){
     switched = false;
     return;
   }
+  counter++;
   if(counter > 4){
     counter = 0;
   }
-  imageHolder.removeChild(imageHolder.firstChild)
-  const newImage = document.createElement("img");
-  newImage.setAttribute("src", "./images/" + imageArray[counter]);
-  console.log("./images/" + imageArray[counter])
-  counter++;
+  image.setAttribute("src", "./images/" + imageArray[counter])
 }
+
+function leftClickHandler () {
+  counter--;
+  if (counter < 0) {
+    counter = 4;
+  }
+  switched = true;
+  image.setAttribute("src", "./images/" + imageArray[counter])
+}
+function rightClickHandler() {
+  counter++;
+  if (counter > 4) {
+    counter = 0;
+  }
+  switched = true;
+  image.setAttribute("src", "./images/" + imageArray[counter])
+}
+
+left.addEventListener("click", leftClickHandler);
+right.addEventListener("click", rightClickHandler);
+
 
 setInterval(autoSwitch, 3000);
