@@ -3,15 +3,8 @@ const image = document.querySelector("#target");
 const left = document.querySelector("#left");
 const right = document.querySelector("#right");
 const dots = document.querySelector("#dots");
-
 let switched = false;
 let counter = 0
-
-//Progress Dots:
-//a list of dots need to be created based on the array length
-//if the index matches the counter value it should be black dot
-//every time the counter changes by auto or by arrows
-//you must go in to the index of the counter and adjust the class
 
 function generateProgressDots () {
   for(let i=0; i<imageArray.length; i++){
@@ -23,7 +16,6 @@ function generateProgressDots () {
 
 generateProgressDots();
 blackDotOnCurrentPokemon();
-
 
 function blackDotOnCurrentPokemon () {
   const dotElementArray = dots.children
@@ -58,6 +50,7 @@ function leftClickHandler () {
   image.setAttribute("src", "./images/" + imageArray[counter])
   blackDotOnCurrentPokemon();
 }
+
 function rightClickHandler() {
   counter++;
   if (counter > 4) {
@@ -70,8 +63,5 @@ function rightClickHandler() {
 
 left.addEventListener("click", leftClickHandler);
 right.addEventListener("click", rightClickHandler);
-
-
-
 
 setInterval(autoSwitch, 3000);

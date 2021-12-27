@@ -27,3 +27,10 @@
   top: 12rem;
   margin: 1rem;
 }
+
+.dots {
+  display: flex;
+  width: 8rem;
+  margin: 1rem auto;
+  justify-content: space-evenly;
+}
