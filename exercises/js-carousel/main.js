@@ -15,19 +15,19 @@ imageHolder.appendChild(image);
 let switched = false;
 let counter = 1
 
-// function autoSwitch () {
-//   if(switched){
-//     switched = false;
-//     return;
-//   }
-//   if(counter > 4){
-//     counter = 0;
-//   }
-//   imageHolder.removeChild(imageHolder.firstChild)
-//   const newImage = document.createElement("img");
-//   newImage.setAttribute("src", "./images/" + imageArray[counter]);
-//   console.log("./images/" + imageArray[counter])
-//   counter++;
-// }
+function autoSwitch () {
+  if(switched){
+    switched = false;
+    return;
+  }
+  if(counter > 4){
+    counter = 0;
+  }
+  imageHolder.removeChild(imageHolder.firstChild)
+  const newImage = document.createElement("img");
+  newImage.setAttribute("src", "./images/" + imageArray[counter]);
+  console.log("./images/" + imageArray[counter])
+  counter++;
+}
 
 setInterval(autoSwitch, 3000);
