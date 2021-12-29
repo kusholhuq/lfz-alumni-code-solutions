@@ -1,0 +1,36 @@
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.carousel {
+  margin-top: 5rem;
+  width: 100%;
+  border: solid black 2px;
+}
+
+.row {
+  display: flex;
+  margin:1rem;
+}
+
+.space-apart {
+  justify-content: space-between;
+}
+
+.center {
+  justify-content: center;
+}
+
+.arrow {
+  position: relative;
+  top: 12rem;
+  margin: 1rem;
+}
+
+.dots {
+  display: flex;
+  width: 8rem;
+  margin: 1rem auto;
+  justify-content: space-evenly;
+}
