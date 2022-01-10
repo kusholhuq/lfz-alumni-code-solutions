@@ -60,15 +60,6 @@ var pokedex = [
 
 function renderPokemon (pokemon) {
 
-  let pokemonObject;
-  for(let i=0; i<pokedex.length; i++){
-    if(pokedex[i].name === pokemon){
-      pokemonObject = pokedex[i];
-      break;
-    }
-  }
-
-
   var outerDiv = document.createElement('div');
   outerDiv.setAttribute('class', 'column-third');
 
@@ -76,20 +67,20 @@ function renderPokemon (pokemon) {
   pokemonCard.setAttribute('class', 'pokemon-card');
 
   var image = document.createElement('img');
-  image.setAttribute('src', pokemonObject.imageUrl);
+  image.setAttribute('src', pokemon.imageUrl);
 
   var cardText = document.createElement('div');
   cardText.setAttribute('class', 'pokemon-card-text');
 
   var h2 = document.createElement('h2');
-  h2.textContent = pokemonObject.name;
+  h2.textContent = pokemon.name;
 
   var h3 = document.createElement('h3');
-  var h3Text = "#" + pokemonObject.number;
+  var h3Text = "#" + pokemon.number;
   h3.textContent  = h3Text;
 
   var p = document.createElement('p');
-  p.textContent = pokemonObject.description;
+  p.textContent = pokemon.description;
 
   cardText.appendChild(h2)
   cardText.appendChild(h3)
@@ -99,17 +90,12 @@ function renderPokemon (pokemon) {
   pokemonCard.appendChild(image);
   pokemonCard.appendChild(cardText);
 
-
-
-
   return outerDiv;
 }
-
-
 
 var row = document.querySelector(".row");
 
 for(let i=0; i<pokedex.length; i++){
-  let pokemon = renderPokemon(pokedex[i].name);
+  let pokemon = renderPokemon(pokedex[i]);
   row.appendChild(pokemon);
 }
